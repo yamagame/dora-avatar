@@ -14,14 +14,20 @@ $ npm start
 
 ## アバターのコントロール
 
+ウェルカム状態
+
+```
+$ curl -X POST -d '{"status":"welcome"}' --header "content-type:application/json" http://localhost:5100/action
+```
+
 通常状態
 
 ```
-$ curl -X POST -d '{"status":"idle", "message":""}' --header "content-type:application/json" http://localhost:5100/action
+$ curl -X POST -d '{"status":"idle"}' --header "content-type:application/json" http://localhost:5100/action
 ```
 
 口パク状態
 
 ```
-$ curl -X POST -d '{"status":"talk", "message":"Hello"}' --header "content-type:application/json" http://localhost:5100/action
+$ curl -X POST -d '{"status":"talk"}' --header "content-type:application/json" http://localhost:5100/action
 ```
